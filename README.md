@@ -30,3 +30,5 @@ window.onload = function () {
 };
 </script>
 ```
+
+Example: http://www.pixel-tyumen.ru/works/js-firework/
