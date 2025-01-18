@@ -12,8 +12,13 @@ export default defineConfig({
         strictPort: true
     },
     build: {
+        lib: {
+            name: 'fireworks',
+            entry: ['js/fireworks/index.coffee'],
+            fileName: (format, entryName) => `fireworks.${format}.js`
+        },
         chunkSizeWarningLimit: 1024 * 1024,
-        outDir: './dist',
+        //outDir: './dist',
         minify: 'terser',
         emptyOutDir: true
         //sourcemap: boolean | 'inline' | 'hidden'

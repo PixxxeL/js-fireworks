@@ -4,7 +4,39 @@ Example: https://pixel-tyumen.ru/works/js-firework/
 
 ## Version 1.1
 
-In progress...
+For install:
+
+```shell
+npm i js-fireworks
+```
+
+For use in your app:
+
+```javascript
+import Fireworks from 'fireworks'
+
+// and after load event
+
+var firework = new Fireworks({
+    id: 'fireworks-canvas',
+    hue: 120,
+    particleCount: 50,
+    delay: 0,
+    minDelay: 20,
+    maxDelay: 40,
+    boundaries: { // of respawn and target
+        top: 50,
+        bottom: 240,
+        left: 50,
+        right: 590
+    },
+    fireworkSpeed: 2,
+    fireworkAcceleration: 1.05,
+    particleFriction: .95,
+    particleGravity: 1.5
+});
+firework.start();
+```
 
 ## Version 1
 

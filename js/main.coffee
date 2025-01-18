@@ -4,7 +4,7 @@ window.onload = ->
     firework = new Fireworks {
         id: 'fireworks-canvas'
         hue: 120
-        particleCount: 50
+        particleCount: 100
         delay: 0
         minDelay: 20
         maxDelay: 40

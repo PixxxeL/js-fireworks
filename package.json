@@ -2,6 +2,9 @@
   "name": "js-fireworks",
   "version": "1.1.0",
   "author": "piksel@mail.ru",
+  "description": "Fireworks on pure 2D canvas without any dependencies",
+  "keywords": ["canvas", "animation"],
+  "license": "MIT",
   "private": false,
   "type": "module",
   "engines": {
@@ -12,6 +15,18 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pixxxel/js-fireworks"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/fireworks.es.js",
+      "require": "./dist/fireworks.umd.js"
+    }
+  },
+  "main": "./dist/fireworks.umd.js",
+  "module": "./dist/fireworks.es.js",
   "devDependencies": {
     "html5-boilerplate": "^8.0.0",
     "sass": "^1.83.0",
