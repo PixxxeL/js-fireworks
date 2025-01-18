@@ -1,34 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Fireworks on Javascript</title>
-</head>
-<body style="background:#333;margin:0;padding:0;display:flex;align-items:center;justify-content:center;height:100vh;">
-    <canvas width="800" height="600" id="fireworks-canvas" style="background:#000;"></canvas>
-    <script src="js/fireworks.js"></script>
-    <script>
-window.onload = function () {
-    var firework = JS_FIREWORKS.Fireworks({
-        id : 'fireworks-canvas',
-        hue : 120,
-        particleCount : 50,
-        delay : 0,
-        minDelay : 20,
-        maxDelay : 40,
-        boundaries : {
-            top: 50,
-            bottom: 240,
-            left: 50,
-            right: 590
-        },
-        fireworkSpeed : 2,
-        fireworkAcceleration : 1.05,
-        particleFriction : .95,
-        particleGravity : 1.5
-    });
-    firework.start();
-};
-    </script>
-</body>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fireworks on Javascript</title>
+        <meta name="description" content="Fireworks on pure 2D canvas without any dependencies ">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+        <link rel="apple-touch-icon" href="./assets/favicon.png">
+        <link rel="stylesheet" href="./sass/main.sass">
+    </head>
+    <body class="fade-in-1">
+        <pug src="./pug/base.pug" />
+        <script type="module" src="./js/main.js"></script>
+    </body>
 </html>

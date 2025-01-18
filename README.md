@@ -1,7 +1,14 @@
-Javascript Fireworks
-====================
+# Javascript Fireworks
 
-Usage on your HTML page:
+Example: https://pixel-tyumen.ru/works/js-firework/
+
+## Version 1.1
+
+In progress...
+
+## Version 1
+
+No dependencies. Just download `js/fireworks.js` and place on your HTML page:
 
 ```html
 <canvas width="640" height="480" id="fireworks-canvas" style="background:#000;"></canvas>
@@ -30,5 +37,3 @@ window.onload = function () {
 };
 </script>
 ```
-
-Example: http://www.pixel-tyumen.ru/works/js-firework/
