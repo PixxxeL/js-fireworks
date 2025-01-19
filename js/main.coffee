@@ -1,4 +1,6 @@
 import Fireworks from './fireworks/index.coffee'
+import Explosion from './fireworks/explosion.coffee'
+import { randIntRange } from './fireworks/utils.coffee'
 
 window.onload = ->
     firework = new Fireworks {
@@ -20,3 +22,14 @@ window.onload = ->
         particleGravity: 1.5
     }
     firework.start()
+    explosion = new Explosion 400, 300, {
+        id: 'fireworks-canvas'
+        particleFriction: .92
+        particleGravity: 0
+    }
+    explosion.canvas.addEventListener 'click', (e) ->
+        explosion.hue = randIntRange 0, 255
+        explosion.reset e.clientX - e.target.offsetLeft, e.clientY - e.target.offsetTop
+        explosion.run()
+    explosion.run()
+        

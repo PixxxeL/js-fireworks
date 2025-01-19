@@ -1,5 +1,6 @@
 import Firework from './firework.coffee'
 import Particle from './particle.coffee'
+import store from './store.coffee'
 import { randRange, randIntRange } from './utils.coffee'
 
 
@@ -25,6 +26,15 @@ class Fireworks
             left: 50
             right: @width - 50
         }
+        storeProps = [
+            'fireworkSpeed'
+            'fireworkAcceleration'
+            'particleFriction'
+            'particleGravity'
+        ]
+        for prop in storeProps
+            if options[prop]
+                store[prop] = options[prop]
         @render.bind @
 
     start: ->
